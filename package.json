@@ -1,0 +1,22 @@
+{
+  "name": "edge-cache-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Cloudflare Worker that normalizes cache keys, serves stale while revalidating and adds security headers.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev -c wrangler.toml -c origin/wrangler.toml --port 8701 --inspector-port 8709 --var DEMO_PAGE:on",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "screenshots": "node scripts/screenshots.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "0.23.0",
+    "@cloudflare/workers-types": "5.20261027.1",
+    "playwright": "1.64.0",
+    "typescript": "5.9.3",
+    "vitest": "4.1.12",
+    "wrangler": "4.124.0"
+  }
+}

@@ -1,0 +1,10 @@
+﻿name = "edge-cache-worker"
+main = "src/index.ts"
+compatibility_date = "2026-08-15"
+
+# In `npm run dev` this binding points at the local demo origin in ./origin.
+# For a real deployment, bind it to your own origin Worker instead.
+services = [{ binding = "ORIGIN", service = "demo-origin" }]
+
+[vars]
+ALLOWED_ORIGINS = "http://localhost:8701,https://shop.example"
